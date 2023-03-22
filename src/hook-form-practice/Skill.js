@@ -7,11 +7,10 @@ const Skill = () => {
   ];
   const [skills, setSkills] = useState(initialState);
   return (
-    <ul>
-      <li>Java SE</li>
-      <li>Java EE</li>
-      <li>React</li>
-      <li>SQL</li>
+    <ul className="row pb-2">
+      {skills.map((skill) => {
+        return <li key={skill.id}>{skill.title}</li>;
+      })}
     </ul>
   );
 };
